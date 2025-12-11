@@ -73,3 +73,56 @@ Understanding missingness early helps guide decisions on whether to drop, impute
 
 A working cleaned dataset (`AviationData_working.csv`) was saved after this transformation.
 
+
+### Missing Value Assessment & Cleaning Decisions
+
+To understand the overall quality of the dataset and guide effective preprocessing, a missing-value analysis was performed. This allowed us to identify columns that contain too many missing values to be analytically useful, as well as columns that are important for safety-risk assessment and must be retained.
+
+##  Key Findings
+Several columns show extremely high missing percentages (60–85%). These include:
+- `schedule`
+- `aircarrier`
+- `fardescription`
+- `longitude`
+- `latitude`
+
+Columns with such high missingness provide limited value for risk evaluation and will be removed from the dataset.
+
+Other columns show moderate missingness but are important for aircraft safety profiling. These will be retained and cleaned through imputation:
+- `aircraftcategory`
+- `purposeofflight`
+- `weathercondition`
+- `broadphaseofflight`
+
+Columns related to injuries, aircraft specifications, and event characteristics show low missingness and will be kept for further analysis.
+
+##  Cleaning Decisions
+1. **Drop columns with extremely high missingness (>60%)**  
+   These fields do not contribute meaningfully to risk analysis and will be removed.
+
+2. **Impute key categorical fields with `'Unknown'`**  
+   For important analytical columns that contain some missing values, imputation will ensure consistency without losing valuable records.
+
+3. **Retain all operational, aircraft-specific, injury-related, and event-detail columns**  
+   These form the foundation for the aircraft risk evaluation models and dashboards that will be built later in the project.
+
+This step ensures the dataset is clean, consistent, and aligned with the project’s goal of identifying low-risk aircraft for stakeholder procurement.
+
+##  Handling Missing Data
+
+After identifying the missing value percentages, we applied a targeted cleaning strategy to preserve data quality while removing unusable columns.
+
+**Columns Removed (Too Much Missing Data)**  
+The following columns had more than 50% missing values and were removed from the dataset because they were unreliable for analysis and not essential to the stakeholder’s risk evaluation:
+
+- `schedule` (85.85% missing)  
+- `aircarrier` (81.27% missing)  
+- `fardescription` (63.97% missing)  
+- `aircraftcategory` (63.68% missing)  
+- `longitude` (61.33% missing)  
+- `latitude` (61.32% missing)
+
+**Columns Kept and Cleaned Where Necessary**  
+Columns below 50% missing were kept because they contain useful safety or aircraft information relevant to assessing accident risks. These will be cleaned further using imputation or domain-based corrections in later steps.
+
+This step prepares the dataset for deeper analysis by removing noise and preserving high-value fields that support the stakeholder’s decision-making.
