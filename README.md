@@ -33,4 +33,22 @@ From a business and investment perspective, stakeholders would want to know:
 
 ## Project Structure
 
+New-Aviation-LowRisk-AircraftPurchase-Project/
+├── .ipynb_checkpoints/   # Auto-saved notebook files (ignored by .gitignore)
+├── Data/                 # Dataset folder (tracked)
+├── Presentation/         # Powerpoint Slides file(tracked)       
+├── .gitignore            # Git ignore rules (tracked)
+├── Brian.ipynb           # Main Jupyter notebook (tracked)
+└── README.md             # Project overview and instructions (tracked)
+
+
+## Dataset loading & initial Exploration
+The analysis begins by loading the AviationData.csv, which entails approx. 88,000 aviation accidents and incident records from 1962-2023.
+This step shows the dataset's structure:
+- The number or row and columns
+- Features available for analysis
+- The initial distribution of the key attributes
+- Red flags: missing values, inconsistent formatting or duplicated columns
+
+**N/B This stage informs as on the strategy of cleaning and also ensures that each approach is based on accurate and well understood data.**
 
