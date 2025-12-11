@@ -52,3 +52,24 @@ This step shows the dataset's structure:
 
 **N/B This stage informs as on the strategy of cleaning and also ensures that each approach is based on accurate and well understood data.**
 
+
+### ** Standardizing Column Names**
+
+The original dataset included column names with spaces, punctuation marks, and inconsistent formatting.  
+To ensure correct analysis and avoid errors when referencing columns in Python, all column names were standardized by:
+
+- Converting to lowercase  
+- Replacing spaces and punctuation with underscores  
+- Removing inconsistent characters  
+
+This normalization step ensures that all variables can be accessed easily and consistently throughout the project.
+
+### ** Parsing Date Columns & Missing Values Assessment**
+
+A key part of preparing the dataset involved identifying and converting date fields into proper datetime format. Since aviation accidents are recorded chronologically, parsing these columns correctly allows for trend analysis and time-based insights.
+
+Additionally, a missing values assessment was performed to quantify the completeness of each column.  
+Understanding missingness early helps guide decisions on whether to drop, impute, or engineer features during the cleaning and modeling stages.
+
+A working cleaned dataset (`AviationData_working.csv`) was saved after this transformation.
+
