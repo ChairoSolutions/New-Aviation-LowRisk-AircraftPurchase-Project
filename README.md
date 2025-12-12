@@ -666,4 +666,12 @@ We produced visualizations that directly feed the procurement decision:
 
 All plots were saved to the `Presentation/` folder for direct insertion into the stakeholder presentation.
 
+###  Key Insights & Candidate Low-Risk Models
+
+We generated a shortlist of candidate low-risk models using:
+- models with ≥5 recorded accidents (to avoid noise),
+- sorted by lowest average fatality rate,
+- output saved as `Data/candidate_low_risk_models.csv`.
+
+This file provides stakeholders with an initial shortlist for procurement evaluation. Further vetting should include fleet size, maintenance history, and insurer feedback.
 
