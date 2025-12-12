@@ -160,3 +160,14 @@ What I decided
 
 I will keep all these values in the dataset.
 They represent real incidents, and they help us understand true accident patterns rather than just the averages.
+
+####  Feature Engineering
+
+Created risk-focused features:
+- `accident_year`, `accident_month`
+- `total_injuries` (normalized)
+- `fatal` (normalized)
+- `fatality_rate` = fatal / (total_injuries + 1)
+- `is_amateur_built` boolean, this helps compare risk of amateur vs certified planes
+
+These features are used to compute per-model and per-manufacturer risk indicators.
