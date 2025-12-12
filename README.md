@@ -126,3 +126,37 @@ The following columns had more than 50% missing values and were removed from the
 Columns below 50% missing were kept because they contain useful safety or aircraft information relevant to assessing accident risks. These will be cleaned further using imputation or domain-based corrections in later steps.
 
 This step prepares the dataset for deeper analysis by removing noise and preserving high-value fields that support the stakeholder’s decision-making.
+
+## Outlier Inspection
+
+We inspected outliers in key injury/fatality counts using an IQR method. Outliers were flagged but not removed. Each flagged case will be reviewed manually if needed during deeper investigation.
+
+
+## Outlier Check – What I Found
+
+When I checked the data for unusually high or low numbers in the injury columns, I discovered that many rows were marked as “outliers.” Specifically:
+
+- 17,813 cases for total fatal injuries
+
+- 15,502 cases for total minor injuries
+
+- 13,090 cases for total serious injuries
+
+What this really means
+
+These numbers may look surprising, but they don’t mean the data is wrong. Aviation accident data naturally has:
+
+Many incidents with no injuries at all, and
+
+A smaller number of incidents with very high injury counts
+
+Because of this, the computer labels a lot of these high-injury cases as “unusual,” even though they are real and important events.
+
+Why this matters
+
+For stakeholders who want to understand accident severity or make decisions about aircraft operations, these high-injury events are crucial. Removing them would hide the most serious accidents.
+
+What I decided
+
+I will keep all these values in the dataset.
+They represent real incidents, and they help us understand true accident patterns rather than just the averages.
