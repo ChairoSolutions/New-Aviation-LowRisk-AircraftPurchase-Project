@@ -171,3 +171,499 @@ Created risk-focused features:
 - `is_amateur_built` boolean, this helps compare risk of amateur vs certified planes
 
 These features are used to compute per-model and per-manufacturer risk indicators.
+
+## ✈️ Features Analysis
+
+---
+
+## 1. Accidents per Year — Trend Analysis
+
+### 📊 Plot
+![Accidents per Year](Presentation/01_accidents_per_year.png)
+
+The chart shows the number of aviation accidents recorded each year from 1948 to 2021. Several key patterns emerge:
+
+---
+
+### 🔼 Sudden Spike Around 1982–1983
+
+A sharp increase appears, jumping from almost zero recorded accidents to more than 3,500 in a single year.
+
+**Why this happened:**  
+This does *not* reflect a real-world surge in accidents. It is due to:
+
+- Changes in reporting standards  
+- Integration of historical databases  
+- More complete NTSB digitization starting in the early 1980s  
+
+Many incidents before this period were simply not recorded.
+
+**What this means:**  
+➡️ The dataset becomes **reliable starting from the early 1980s**.
+
+---
+
+### 📉 Long-Term Decline in Accidents (1983 → 2021)
+
+After reporting improved, accident counts steadily decrease.
+
+**This reflects:**
+
+- Advances in aircraft engineering  
+- Stronger aviation regulations  
+- Better pilot training  
+- Improved maintenance standards  
+- Modern navigation and safety tech (GPS, TCAS, avionics)
+
+**Stakeholder insight:**  
+➡️ Modern aircraft are statistically much safer than older generations.
+
+---
+
+### 📊 Stabilization Since the Early 2000s
+
+From around 2000 onward, accident numbers flatten at a stable, lower level.
+
+**Interpretation:**
+
+- The industry reached a mature safety phase  
+- Improvements are now incremental  
+- Shows consistent safety performance
+
+➡️ This supports confidence in purchasing modern aircraft.
+
+---
+
+### 🛫 Why This Matters for Selecting Low-Risk Aircraft
+
+This trend analysis offers important guidance:
+
+1. **Risk assessment should focus on recent decades**, not the full historical dataset.  
+2. **Aircraft models introduced after 1990–2000 carry significantly lower operational risk.**  
+3. The long-term decline confirms improving aviation safety over time.  
+4. Accident-per-year data can help weight risk scores by aircraft age or decade.
+
+---
+## ✈️ Manufacturer Analysis — Accident Count vs. Average Fatality Rate
+
+### 📊 Overview
+The chart below compares the **top 20 aircraft manufacturers** based on accident count. It also overlays the **average fatality rate** for each manufacturer.
+
+This combined view helps identify manufacturers with both:
+- High accident involvement, and  
+- High or low severity outcomes.
+
+![Top Manufacturers](Presentation/02_makers_count_vs_fatality.png)
+
+---
+
+### 🛠️ 1. Cessna Dominates Accident Counts
+Cessna shows the **highest number of recorded accidents**, far more than any other manufacturer.
+
+**Why this doesn’t necessarily mean Cessna is unsafe:**
+- Cessna has produced **hundreds of thousands of small general aviation aircraft**.
+- These aircraft are widely used for training, rentals, and private flying.
+- More aircraft in operation → more exposure → more reported accidents.
+
+👉 **High exposure, not necessarily high risk per aircraft.**
+
+---
+
+### 🛠️ 2. Piper and Beechcraft Also Show High Accident Totals
+Piper and Beechcraft also appear near the top of the list.
+
+**Reason:**  
+They manufacture popular general aviation aircraft used by private pilots and flight schools.
+
+👉 These brands account for a large share of the U.S. general aviation fleet.
+
+---
+
+### ⚠️ 3. Fatality Rate Varies Significantly Across Manufacturers
+The red line shows that **fatality rates do not always match accident counts**.
+
+Key notes:
+- Some manufacturers with *moderate* accident counts have **higher fatality rates**.
+- Some with *high* accident counts (e.g., Cessna) actually show **lower average fatality severity**.
+
+This means:
+- Accident **frequency** and **accident severity** must be evaluated separately.
+
+---
+
+### 🔍 4. Smaller and Specialized Manufacturers Show Higher Variability
+Brands with fewer total aircraft (e.g., Mooney, Bellanca, Schweizer) show **more variability** in fatality rates.
+
+This is expected because:
+- A few severe accidents can raise the average sharply.
+- Their fleet sizes are smaller, so each event has a larger impact.
+
+---
+
+### 🛫 What This Means for Selecting Lower-Risk Aircraft
+
+**1. High accident counts correlate with high usage, not necessarily unsafe design.**  
+Cessna, Piper, Beechcraft appear frequently because they dominate general aviation.
+
+**2. Fatality rate is a better indicator of severity.**  
+Manufacturers with consistently low fatality rates may indicate safer system design, better stability, or aircraft purpose (trainer vs. high-performance aircraft).
+
+**3. Fleet size must be considered.**  
+Some smaller brands appear riskier because their samples are small.
+
+**4. For buyers and operators:**  
+- Recent-generation Cessna, Piper, Beechcraft, and Cirrus models are widely used and have strong safety performance.  
+- Consider both accident and severity metrics when evaluating models for purchase.
+
+---
+## ✈️ Aircraft Model Analysis — Top 25 Models by Accident Count
+
+### 📊 Overview
+The chart below highlights the **25 aircraft models with the highest number of recorded accidents**. This gives a clearer view of which aircraft types appear most frequently in accident reports.
+
+![Top Models](Presentation/03_top_models_accidents.png)
+
+---
+
+### 🛩️ 1. Cessna Trainer Models Dominate the List
+The **Cessna 152, 172, and 172N** appear at the very top with the highest accident counts.
+
+**Why these models lead the list:**
+
+- They are the **most common training aircraft** worldwide.  
+- Used heavily in flight schools for student pilots.  
+- High daily usage and repeated takeoffs/landings increase exposure.  
+- Large global fleet size.
+
+👉 **More aircraft + more training flights = more recorded accidents**, not necessarily unsafe design.
+
+---
+
+### 🛩️ 2. Piper PA-28 Series Appears Repeatedly
+Several Piper models (PA-28-140, PA-28-150, PA-28-161, etc.) also show high accident presence.
+
+**Reason:**  
+Like Cessna, the PA-28 family is widely used for:
+- Flight training  
+- Private flying  
+- Small commercial operations  
+
+Their popularity naturally increases their representation in accident data.
+
+---
+
+### 📉 3. Most Models in the Top 25 Are General Aviation (GA)
+The list is dominated by small single-engine piston aircraft — not commercial jets.
+
+This is because:
+- GA aircraft fly **many more individual flights**.  
+- Pilots range from students to hobbyists with varying experience.  
+- GA flights operate in uncontrolled environments (rural airstrips, grass fields, etc.).  
+- Reporting is consistent and centralized in the U.S.
+
+👉 Accident count is more about **usage patterns and pilot experience** than model failure.
+
+---
+
+### 🛫 4. Only a Few Larger / Commercial Models Appear
+Examples include:
+- **Boeing 737**
+- **Cessna 206 series**
+
+These appear far lower on the list.
+
+**Reason:**  
+Commercial aircraft have:
+- Highly trained crews  
+- Strict regulation and maintenance  
+- Far fewer operators  
+- Far fewer total aircraft compared to GA fleets
+
+👉 The low counts reinforce that commercial aircraft have **much lower accident rates**.
+
+---
+
+### 🧭 What This Means for Aircraft Selection
+
+1. **High accident counts usually reflect high fleet size, not poor safety.**  
+   Cessna and Piper dominate because they are used everywhere, especially for training.
+
+2. **GA aircraft have more accidents but serve different uses**  
+   — their risk profile is not comparable to commercial jets.
+
+3. **Accident counts alone do not indicate risk.**  
+   They must be paired with:
+   - Fatality rate  
+   - Fleet size  
+   - Typical mission (training vs transport)  
+   - Model age and generation  
+
+4. **For buyers and operators:**  
+   Modern variants of the Cessna 172, Piper PA-28, and similar models remain widely trusted and commonly used for training and private operations due to reliable safety records over decades.
+
+## ⚠️ Aircraft Models with the Highest Fatality Rates (Models with ≥5 Accidents)
+
+### 📊 Overview
+The chart below shows aircraft models with the **highest average fatality rates**, but only for models that have had **at least 5 recorded accidents**.  
+This helps avoid misleading results from very rare, one-off events.
+
+![Fatality Rate by Model](Presentation/04_model_fatality_rate.png)
+
+---
+
+### 🔥 1. High Fatality Rate Does Not Mean the Model Is Unsafe by Design
+Several aircraft models show fatality rates between **0.6 and 0.9**, meaning that **60–90% of accidents involving these models resulted in fatalities**.
+
+However, this does *not* necessarily indicate poor engineering.  
+Instead, many of the models at the top of the list share common characteristics:
+
+- **High-performance experimental aircraft**
+- **Older legacy aircraft no longer widely produced**
+- **Special-purpose aircraft (aerobatic, homebuilt, experimental class)**
+- **Rotorcraft with unique operational environments**
+
+👉 Many of these aircraft are flown by pilots in **high-risk missions**, not routine transportation.
+
+---
+
+### 🛠️ 2. Aerobatic, Homebuilt, and Experimental Aircraft Are Over-represented
+Models such as:
+
+- **Pitts S-2B**  
+- **Starduster Too**  
+- **Steen Skybolt**  
+- **Lancair models (IV, IV-P, 235)**  
+- **Thorp T-18**
+
+are designed for:
+
+- Aerobatic flying  
+- High-speed performance  
+- Homebuilt/kit construction  
+
+These aircraft tend to have:
+- Higher stall speeds  
+- Less forgiving handling  
+- Pilots with specialized training requirements  
+- More risk-prone flight profiles  
+
+👉 Their higher fatality rates reflect *usage patterns*, not necessarily construction issues.
+
+---
+
+### 🚁 3. Helicopters and Unique-Mission Aircraft Also Feature
+Examples like:
+
+- **R-22 Beta II**
+- **BO-105CBS**
+
+operate in demanding roles (training, utility, law enforcement), often at low altitude.
+
+Low-altitude operations → less time for recovery → higher severity.
+
+---
+
+### 🛩️ 4. Commercial and Modern GA Aircraft Are Largely Absent
+Notably, the following are **not** present among high-fatality-rate models:
+
+- Modern Cessna 172/182  
+- Piper PA-28 families  
+- Cirrus SR-series  
+- Mainstream commercial jets  
+
+👉 These categories show significantly lower fatality rates in general aviation and commercial operations.
+
+---
+
+### 🧭 What This Means for Aircraft Selection
+
+1. **High fatality rate often reflects mission type, not poor design.**
+   Aerobatic and experimental models show higher risk because of how and where they are flown.
+
+2. **Mainstream general aviation aircraft (Cessna, Piper, Cirrus) maintain far lower fatality rates.**
+
+3. **Stakeholders evaluating safety should focus on:**
+   - Modern, certified production aircraft  
+   - Proven safety records in training and transport roles  
+
+4. **High-fatality-rate models are typically unsuitable for commercial or low-risk private operations.**
+
+---
+
+## 🎯 Fatality Rate by Purpose of Flight (Top 15 Categories)
+
+### 📊 Overview  
+This chart summarizes the **average fatality rate by purpose of flight**, focusing on the 15 categories with the highest number of recorded accidents.  
+Different types of flight operations carry different inherent risk levels based on mission profile, altitude, pilot workload, and environmental conditions.
+
+![Fatality Rate by Purpose](Presentation/05_purpose_fatality_rate_.png)
+
+---
+
+### 🔥 1. Specialized & High-Risk Missions Have the Highest Fatality Rates  
+The categories with the highest fatality ratios include:
+
+- **Skydiving operations**  
+- **Air race/show**  
+- **External load operations**  
+- **Flight test**
+
+These operations typically involve:
+
+- Low-altitude maneuvering  
+- High performance envelopes  
+- Aerobatics or aggressive flight profiles  
+- Limited recovery margins  
+
+👉 These elevated fatality rates reflect the **mission type**, not necessarily unsafe aircraft.
+
+---
+
+### 🧭 2. Public, Corporate, and Observational Operations Are Moderate  
+Categories like:
+
+- **Aerial observation**  
+- **Executive/corporate**  
+- **Public aircraft**  
+
+show fatality rates around *15–18%*.  
+These operations often involve specialized missions, unique airspace constraints, or longer-duration flights.
+
+---
+
+### 🛩️ 3. Personal, Instructional, and Business Flights Show Lower to Mid-Level Rates  
+- **Personal** and **business** flights have moderate fatality rates (13–17%).  
+- **Instructional flights** have one of the **lowest fatality rates (~7%)**, driven by:
+  - Dual controls  
+  - Instructor supervision  
+  - Low flight altitudes  
+  - Training-focused safety culture  
+
+👉 This aligns with expectations—training flights often involve risk management frameworks and structured procedures.
+
+---
+
+### 📦 4. Ferry, Positioning, and Utility Work Present Mid-High Risk  
+These missions sometimes involve:
+
+- Long-distance relocations  
+- Single-pilot operations  
+- Fatigue or unfamiliar routings  
+- Minimal payload and specific operating requirements  
+
+Which contributes to fatality rates in the **12–17%** range.
+
+---
+
+### 🧠 Key Takeaways for Stakeholders
+
+1. **Mission type strongly predicts fatality severity**—far more than aircraft manufacturer or model.
+2. **High-risk categories (Air Race, Skydiving, Flight Test)** are niche operations and not relevant to traditional commercial or private transport.
+3. **Instructional, business, and personal flights remain the safest mainstream categories.**
+4. For most procurement decisions, prioritize:
+   - Certified aircraft  
+   - Standard mission profiles  
+   - Well-established operational procedures  
+
+This ensures alignment with low-risk flight categories.
+
+---
+
+## 7. Average Fatality Rate: Amateur-Built vs Certified Aircraft
+
+![Amateur vs Certified](Presentation/06_amateur_vs_certified.png)
+
+This chart compares the average fatality rate between **FAA-certified aircraft** and **amateur-built (experimental/homebuilt)** aircraft.
+
+### Key Insights
+
+#### 1. Amateur-built aircraft show a significantly higher fatality rate  
+The average fatality rate for amateur-built aircraft is **notably higher** than that of certified aircraft.  
+This aligns with long-established findings in aviation safety:
+
+- Amateur-built aircraft often vary in construction quality, depending on builder skill level.
+- They may use non-standardized components or custom modifications.
+- Flight testing phases typically involve higher risk.
+- Pilots operating amateur-built aircraft may have varying levels of experience.
+
+#### 2. Certified aircraft demonstrate more predictable safety outcomes  
+Certified aircraft go through:
+
+- Extensive FAA airworthiness testing  
+- Standardized manufacturing processes  
+- Rigorous maintenance regulations  
+- Better documentation and historical performance data  
+
+This results in **more consistent safety performance** and **lower fatality rates**.
+
+#### 3. Implications for stakeholders  
+For an organization looking to **purchase and operate aircraft**, this comparison is crucial:
+
+- Certified aircraft provide **better safety reliability**, lower operational risk, and easier regulatory compliance.
+- Amateur-built aircraft may be cheaper but carry **higher operational risk** and **greater insurance and maintenance challenges**.
+
+### Conclusion  
+**Certified aircraft are the safer and more reliable choice for commercial and private operations.**  
+Amateur-built aircraft introduce additional risk that must be carefully evaluated before acquisition or operational use.
+
+## 8. Accidents by Month
+
+![Accidents by Month](Presentation/07_accidents_by_month.png)
+
+This chart shows how aviation accident counts vary across the 12 months of the year.  
+A clear seasonal pattern emerges.
+
+### Key Insights
+
+#### 1. Accident counts peak in mid-year (June–August)
+Accidents rise steadily from January and reach their highest point in:
+- **June**
+- **July** (peak)
+- **August**
+
+These months show the largest concentration of reported incidents.
+
+**Why this happens:**
+- Summer brings **more flying activity**, especially for private and recreational pilots.
+- Better weather encourages more flight hours overall.
+- Seasonal tourism increases air traffic volume.
+
+More flying → more exposure → more accidents recorded.
+
+#### 2. Lowest accident counts appear in winter months
+Accidents are lowest in:
+- **January**
+- **February**
+- **November**
+- **December**
+
+**Likely reasons:**
+- Reduced flying activity due to weather
+- Fewer recreational flights
+- Shorter daylight hours limiting private flying
+
+#### 3. Operational insights for decision-makers
+For organizations considering aircraft acquisition or operations planning:
+
+- **Peak season risk rises due to higher traffic volume**, not necessarily poorer safety.
+- Staffing, maintenance scheduling, and safety monitoring should be strengthened in summer months.
+- Winter offers lower operational exposure but may have weather-related challenges (not visible in this chart, but relevant operationally).
+
+### Bottom Line
+Accident counts closely follow **seasonal flying activity**.  
+Understanding these patterns helps with **risk planning**, **staffing**, and **maintenance scheduling**.
+
+###  Exploratory Data Analysis (Goal-Focused)
+
+We produced visualizations that directly feed the procurement decision:
+1. Accidents per year — long-term trend analysis.
+2. Manufacturer counts vs average fatality rate — identify reliable manufacturers.
+3. Top aircraft models by accident count — identify frequently involved models.
+4. Average fatality rate per model (filtered by minimum accident count) — model-level risk index.
+5. Average fatality rate by purpose of flight — operational risk insight.
+6. Amateur-built vs certified comparison — construction method risk comparison.
+7. Accidents by month (seasonality) — operational schedule risk.
+
+All plots were saved to the `Presentation/` folder for direct insertion into the stakeholder presentation.
+
+
