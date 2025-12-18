@@ -40,6 +40,7 @@ New-Aviation-LowRisk-AircraftPurchase-Project/
 ├── .gitignore            # Git ignore rules (tracked)
 ├── Brian.ipynb           # Main Jupyter notebook (tracked)
 └── README.md             # Project overview and instructions (tracked)
+|__ requirements.txt      # Saves project dependencies for reproducibility
 
 
 ## Dataset loading & initial Exploration
@@ -315,7 +316,7 @@ Some smaller brands appear riskier because their samples are small.
 - Recent-generation Cessna, Piper, Beechcraft, and Cirrus models are widely used and have strong safety performance.  
 - Consider both accident and severity metrics when evaluating models for purchase.
 
----
+
 ##  Aircraft Model Analysis — Top 25 Models by Accident Count
 
 ###  Overview
@@ -681,57 +682,89 @@ Based on historical accident records (1962–2023), injury severity outcomes, an
 
 These recommendations are **data-informed**, not endorsements, and should be evaluated alongside operational, regulatory, and financial factors.
 
-### Recommended Low-Risk Aircraft Models (Indicative)
 
-The following models demonstrate:
-- Repeated historical operation
-- Low or zero fatality rates
-- Low injury severity scores
-- Sufficient incident counts to support confidence in results
+## Exposure Normalization (Proxy-Based)
 
-**Examples from the analysis include:**
-- **A300 / A300-600**
-- **A320-214**
-- **737-300 / 737-800 variants**
-- **DC-10-40**
-- **ATR-72**
-- **DHC-2 MK. I (120A)**
+Ideally, aircraft risk should be normalized by fleet size or total flight hours.  
+However, this dataset does not provide direct measures of exposure.
 
-> These models show consistent patterns of **non-fatal outcomes and lower injury severity** relative to other aircraft types in the dataset.
+To address this limitation, we apply a **proxy-based normalization approach** by estimating exposure using the number of years an aircraft model appears in accident records.  
 
+This allows us to approximate relative exposure and compute **accidents per active service year**, reducing bias caused by models that are simply flown more often.
 
+### Why Exposure Normalization Matters
 
-### How These Models Should Be Used by Decision-Makers
+Some aircraft models appear in more accident records simply because they are flown more frequently or have been in service for longer periods.
 
-For the Head of the Aviation Division, these aircraft models should be viewed as:
+To account for this, we adjusted accident counts by the number of years each aircraft model appears in the data.  
+This allows us to compare aircraft models on a **per-year risk basis**, rather than total accident volume alone.
 
-- **Shortlisted candidates** for deeper due diligence
-- **Benchmarks** for safety performance comparison
-- **Inputs into procurement risk models**, not final decisions
+As a result, the recommended low-risk aircraft models represent those with consistently safer performance **relative to their operational exposure**.
 
-Final procurement decisions should additionally consider:
-- Regulatory compliance (FAA, EASA, KCAA)
-- Maintenance and parts availability
-- Fleet commonality
-- Mission profile (commercial vs private use)
-- Operating cost and fuel efficiency
+## Limitations and Assumptions
 
+- The dataset does not include fleet size or flight-hour exposure.
+- To address this, we introduced an exposure proxy based on incident frequency per aircraft model.
+- While this improves fairness, true operational exposure data would further strengthen conclusions.
 
+## Recommendations
 
-### Strategic Insight
+Based on normalized risk metrics, severity scoring, and sensitivity analysis, 
+we recommend that stakeholders prioritize aircraft models that:
 
-The key insight from this analysis is **not that one aircraft is “the safest”**, but that:
-> *Aircraft with long operational histories and consistently low injury severity profiles represent lower procurement and operational risk.*
+- Demonstrate consistently low normalized accident risk
+- Show low injury severity outcomes
+- Remain stable across multiple analytical assumptions
 
-This data-driven shortlisting allows leadership to **reduce uncertainty early**, focus resources efficiently, and negotiate from an informed position.
+These models represent lower operational and safety risk for both commercial and private use.
 
+## Recommendations for Aircraft Procurement
 
-### Recommendation Summary for Executive Review
+Based on normalized risk, severity outcomes, and robustness checks,
+the following aircraft models consistently demonstrate lower operational risk:
 
-✔ Use data-identified low-risk models as a **starting shortlist**  
-✔ Avoid decisions based on anecdotal safety perception  
-✔ Integrate severity-based metrics into procurement policy  
-✔ Use the interactive dashboard for continuous reassessment  
+- **Cessna 172**
+- **Cessna 182**
+- **Piper PA-28**
+- **Beechcraft Bonanza**
+- **Diamond DA40**
+
+These models:
+- Exhibit low accident rates relative to operational exposure
+- Show lower injury severity when incidents occur
+- Perform consistently across sensitivity tests
+
+They are well-suited for:
+- Private aviation
+- Training fleets
+- Light commercial operations
+
+## Conclusion
+
+This analysis evaluated aircraft safety risk using historical accident data,
+with a focus on identifying models suitable for low-risk acquisition and operation.
+
+To address data limitations:
+- Accident risk was normalized using an exposure proxy
+- Sensitivity analyses were conducted to test robustness
+- Results were validated across multiple assumptions
+
+While the absence of fleet size and flight-hour data prevents perfect normalization,
+the findings provide a **data-driven, defensible shortlist** for procurement decisions.
+
+Future work could integrate:
+- Fleet size data
+- Flight-hour exposure
+- Maintenance and cost metrics
+
+## Interactive Dashboard
+
+To explore the findings interactively, including aircraft risk comparison and safety trends, please use the Tableau dashboard below:
+
+ **Aviation Low-Risk Aircraft Interactive Dashboard**  
+https://public.tableau.com/app/profile/brian.chairo/viz/New-Aviation-LowRisk-AircraftPurchase-Project-InteractiveDashboard/Dashboard1
+
+This dashboard allows the head of New Aviation Division to filter by aircraft model, injury severity, and time period to support data-driven aircraft purchase and operational decisions.
 
 > This analysis demonstrates a full data analytics workflow, from business understanding and data preparation to stakeholder-ready insights and interactive decision-support tools.
 
